@@ -1,4 +1,4 @@
-# Weather Application
+# WeatherWise - A Weather Application
 
 This is a weather application built with React.js that provides current and hourly weather forecasts. It uses the OpenWeatherMap API to fetch weather data.
 
