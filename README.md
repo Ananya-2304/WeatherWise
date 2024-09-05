@@ -14,6 +14,7 @@ This is a weather application built with React.js that provides current and hour
 - Provides hourly weather forecasts.
 - Shows loading and error messages.
 - Default city is set to Bangalore.
+- You can access the deployed website at https://weatherwiseaweatherapp.netlify.app/
 
 ## Technologies Used
 
