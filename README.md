@@ -43,7 +43,7 @@ This is a weather application built with React.js that provides current and hour
 
 3. **Set Up Environment Variables**
 
-   Within `.env` file in the root of the project directory , add your OpenWeatherMap API key:
+   Create a `.env` file in the root of the project directory and add your OpenWeatherMap API key:
 
    ```
    REACT_APP_API_KEY=your_api_key_here
