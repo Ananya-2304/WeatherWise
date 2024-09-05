@@ -1,26 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import NavBar from './Components/NavBar';
-import HourlyWeather from './Components/HourlyWeather';  
+import HourlyWeather from './Components/HourlyWeather';
 import CurrentWeather from './Components/CurrentWeather';
 import LoadingPage from './Components/LoadingIndicator';
 import ErrorPage from './Components/Error';
 
 const App = () => {
-  const [city, setCity] = useState('Bangalore'); // Set Bangalore as the default city
+  const [city, setCity] = useState('Bangalore');
   const [weather, setWeather] = useState(null);
   const [selectedTab, setSelectedTab] = useState('Hourly');
   const [forecast, setForecast] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const apiKey = process.env.REACT_APP_API_KEY; // Use process.env to access the API key
+  const apiKey = process.env.REACT_APP_API_KEY;
 
-  const fetchWeather = async (city) => {
+  // Memoize fetchWeather function
+  const fetchWeather = useCallback(async (city) => {
     setLoading(true);
-    setError(''); 
+    setError('');
     try {
-      setCity(city); 
+      setCity(city);
       const weatherResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
       setWeather(weatherResponse.data);
 
@@ -31,11 +32,11 @@ const App = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [apiKey]); // Only change if apiKey changes
 
   useEffect(() => {
-    fetchWeather(city); 
-  }, []);
+    fetchWeather(city);
+  }, [city, fetchWeather]); // Add city and fetchWeather as dependencies
 
   const handleTabChange = (tab) => {
     setSelectedTab(tab);
@@ -44,11 +45,11 @@ const App = () => {
   return (
     <div>
       <NavBar onSearch={fetchWeather} onTabChange={handleTabChange} />
-      
+
       {loading && <LoadingPage />}
-      
+
       {error && !loading && <ErrorPage errorMessage={error} />}
-      
+
       {!loading && !error && city && (
         <>
           {selectedTab === 'Current' && <CurrentWeather weatherData={weather} />}

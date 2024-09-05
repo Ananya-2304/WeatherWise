@@ -6,7 +6,7 @@ const CurrentWeather = ({ weatherData }) => {
     return <div>Loading current weather data...</div>;
   }
 
-  const { main, weather, wind, clouds, visibility, sys } = weatherData;
+  const { main, weather, wind, clouds, visibility} = weatherData;
   const date = new Date().toLocaleDateString();
   const time = new Date().toLocaleTimeString();
   const temperature = main.temp;
