@@ -1,0 +1,46 @@
+.daily-weather-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .left-card, .right-cards {
+    width: 45%;
+  }
+  
+  .left-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .temp-times {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .right-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .temp-card, .details-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  

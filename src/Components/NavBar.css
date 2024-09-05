@@ -1,0 +1,67 @@
+
+.navbar {
+    background-color: #141c24;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-main {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  /* Logo Styling */
+  .navbar-logo {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%; 
+  }
+  
+  /* Title Styling */
+  .app-title {
+    font-size: 45px;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Centered Search Bar */
+  .center-search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Right-aligned Forecast Tabs */
+  .right-tabs {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Forecast Tabs */
+  .forecast-tabs {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .forecast-tabs .tab {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .forecast-tabs .tab:hover {
+    background-color: #1d2d3d;
+    border-radius: 5px;
+  }
+  

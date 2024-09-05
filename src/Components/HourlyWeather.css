@@ -1,0 +1,42 @@
+.hourly-weather-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    position: relative;
+  }
+.hourly-weather{
+    display:flex;
+    justify-content: space-around;
+}  
+.hourly{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248, 244, 244);
+    height: 88vh;
+}
+  .arrow-button {
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .left-arrow {
+    margin-right: 10px; 
+  }
+  
+  .right-arrow {
+    margin-left: 10px; 
+  }
+  
+  
