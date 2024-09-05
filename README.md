@@ -28,8 +28,7 @@ This is a weather application built with React.js that provides current and hour
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/weather-application.git
-   cd weather-application
+   git clone https://github.com/Ananya-2304/WeatherWise.git
    ```
 
 2. **Install Dependencies**
@@ -44,7 +43,7 @@ This is a weather application built with React.js that provides current and hour
 
 3. **Set Up Environment Variables**
 
-   Create a `.env` file in the root of the project directory and add your OpenWeatherMap API key:
+   Within `.env` file in the root of the project directory , add your OpenWeatherMap API key:
 
    ```
    REACT_APP_API_KEY=your_api_key_here
